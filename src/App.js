@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Login, ImagePicker, ShareTitle } from './screens';
+import { Home, Login, ImagePicker, ShareTitle } from './screens';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/your-details">
           <Login />
         </Route>
         <Route path="/image-picker">

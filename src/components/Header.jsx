@@ -7,12 +7,12 @@ const Header = observer(() => {
     const { user } = useRootStore();
 
     return (
-        <div className="p-2 border-b-2 flex items-center">
+        <div className="p-2 flex items-center bg-white shadow">
             <div>
                 <img className="mx-auto h-12 w-auto mr-2" src={logo} alt="Logo" />
             </div>
             <div className="flex-1 leading-tight">
-                <div>{user.name}</div>
+                <div>{user.displayName}</div>
                 <div className="text-gray-500">{user.title}</div>
             </div>
             

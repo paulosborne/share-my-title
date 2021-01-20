@@ -10,7 +10,6 @@ const Images = types
   .actions(self => ({
     search: flow(function* (term) {
       const response = yield GiphyService.search(term);
-      console.log('Results', response);
       self.data = get(response.data, 'data');
     }),
     findById(id) {

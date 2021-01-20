@@ -3,24 +3,35 @@ import kebabize from 'lodash.kebabcase';
 
 const User = types
   .model('UserModel', {
-    name: types.maybeNull(types.string),
-    title: types.maybeNull(types.string),
+    firstName: types.optional(types.string, ''),
+    lastName: types.optional(types.string, ''),
+    interests: types.optional(types.string, ''),
+    title: types.optional(types.string, ''),
     imageId: types.optional(types.string, '', [null, undefined]),
   })
   .actions(self => ({
     setTitle(title) {
       self.title = title;
     },
-    setName(name) {
-      self.name = name;
+    setFirstName(name) {
+      self.firstName = name;
+    },
+    setLastName(name) {
+      self.lastName = name;
     },
     setImage(id) {
       self.imageId = id;
+    },
+    setInterests(interests) {
+      self.interests = interests;
     },
   }))
   .views(self => ({
     get kebabTitle() {
       return kebabize(self.title);
+    },
+    get displayName() {
+      return `${self.firstName} ${self.lastName.charAt(0)}`;
     },
   }));
 

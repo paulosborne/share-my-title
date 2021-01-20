@@ -29,12 +29,21 @@ const Login = observer(() => {
         <input type="hidden" name="remember" value="true" />
         <div className="rounded-md shadow-sm -space-y-px">
           <div>
-            <label htmlFor="name" className="sr-only">Name</label>
-            <input onChange={e => user.setName(e.target.value)} id="name" name="name" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name" />
+            <label htmlFor="firstName" className="sr-only">First Name</label>
+            <input onChange={e => user.setFirstName(e.target.value)} id="firstName" name="firstName" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="First name" />
           </div>
           <div>
-            <label htmlFor="title" className="sr-only">Title</label>
-            <input onChange={e => user.setTitle(e.target.value)} id="title" name="title" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="AND title" />
+            <label htmlFor="lastName" className="sr-only">Last Name</label>
+            <input onChange={e => user.setLastName(e.target.value)} id="lastName" name="lastName" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Surname" />
+          </div>
+      
+          <div>
+            <label htmlFor="title" className="sr-only">ANDTitle</label>
+            <input onChange={e => user.setTitle(e.target.value)} id="title" name="title" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="AND title" />
+          </div>
+          <div>
+            <label htmlFor="interests" className="sr-only">Interests</label>
+            <input onChange={e => user.setInterests(e.target.value)} id="interests" name="interests" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 rounded-b-md focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Interests" />
           </div>
         </div>
 
