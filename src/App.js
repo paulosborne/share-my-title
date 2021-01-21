@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import { withAuthenticator } from 'aws-amplify-react';
 import { Home, Login, ImagePicker, ShareTitle } from './screens';
 
 function App() {
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

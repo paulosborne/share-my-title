@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "titlesharecb2e0043": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
